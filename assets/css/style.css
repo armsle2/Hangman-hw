@@ -1,0 +1,66 @@
+#backgroundImage{z-index: 1;}
+
+#backgroundImage:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../images/Movie_Theater.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    opacity: 0.4;
+    /*filter:alpha(opacity=40);*/
+    height:100%;
+    width:100%;
+}
+
+/*@media (min-width: 768px)
+{
+	.col-border:before{
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		border-right: 3px solid black;
+	}
+}*/
+
+#column-1 {
+	height: 550px;
+	border: 5px solid black;
+	
+}
+
+#column-2 {
+	height: 550px;
+	border: 5px solid black;
+	
+}
+
+#word-picture  {
+	height: 400px;
+}
+
+#word-picture img {
+	max-width: 400px;
+	max-height: 400px;
+}
+
+#game-word {
+	/*padding-top: 30px;*/
+	font-weight: bold;
+	font-size: 30px;
+	letter-spacing: 6px;
+}
+	
+#win-counter {
+	font-size: 80px;
+}
+
+#loss-counter {
+	font-size: 80px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman: The Movies Edition</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</head>
+<body>
+
+	<div id="backgroundImage">
+		<div class="container text-center">
+			<header><h1>HANGMAN:</h1></header>
+			<h2>The Movie Edition</h2>
+
+    		<div class="row row-relative">
+
+      
+      <div class="col-md-6 col-border" id="column-1">
+      	
+      	<h3>Word Image will be in this column</h3>
+      	<div id="word-picture"><!-- <img src="assets/images/Movie_Theater.jpg"> --></div>
+      	
+      	<div id="game-word"></div>
+      	
+        
+      </div>
+
+     
+      <div class="col-md-6 col-border" id="column-2">
+      	
+      		<h3>Press a key to guess a letter!</h3>  
+      		<br /> 
+			<h4><strong>Letters Guessed:</strong></h4>
+			<br />
+      		<div id="letters-guessed"></div> 
+      		<br />
+      		<br />
+			<h4>Guesses Left: </h4>
+      		<div id="guesses-left"></div> 
+
+      		<br />
+      		<br />
+      		<div class="row row-relative">
+      			<div class="col-md-6" id="wins">
+      			<h3>Wins:</h3>
+      			<div id="win-counter">0</div>
+      			</div> 
+      			
+      				
+      		<div class="col-md-6" id="losses">
+      			<div class="col-md-6">
+      			<h3>Losses:</h3>
+				<div id="loss-counter">0</div>
+      			</div> 	
+
+      		</div>	
+      	
+      </div>
+    </div>
+
+	  </div>
+
+
+	</div>
+
+<!-- 
+	- Determine theme for game 
+	- create big "Hangman" header in center of page
+	- create border that will have the following inside of it
+		- set area for images to populate when user wins
+		- find words you want to use and find images associated with them (at least 4 words)
+		- set area for "press any key to get started"
+		- create layout for letters guessed, actual word being guessed, wins, and losses
+	- -->
+
+
+
+</body>
+</html>
