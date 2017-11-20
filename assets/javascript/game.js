@@ -6,6 +6,7 @@ var guessesLeft = 7
 var wins = 0
 var losses = 0
 var wordLines = " - "
+var wordBank = [hitch, batman, pif, collateral]
 // var userGuess = function(event){
 // 			$(document).on("keyup", event.key)}
 // console.log(userGuess)
@@ -23,7 +24,7 @@ $(document).keyup(function(event){
 	var userGuess = event.key 
 	console.log($("#game-word")[0].innerHTML)
 	if ($("#game-word")[0].innerHTML === ""){
-		hitchArray();
+		wordArray();
 
 	}else {console.log(userGuess)}
 	
@@ -32,9 +33,11 @@ $(document).keyup(function(event){
 
 
 //have word lines loaded that match the number of letters for word being guessed
-function hitchArray(){
-	for (var i = 0; i < hitch.length; i++){
-		console.log(hitch[i]);
+function wordArray(){
+//randomly choose a word from word bank array
+var wordChooser = wordBank[Math.floor(Math.random() * wordBank.length)]
+console.log(wordChooser)
+	for (var i = 0; i < wordChooser.length; i++){
 		var gameWordDiv = $("#game-word");
 		var wordLetters = wordLines[i];
 		$(gameWordDiv).append(wordLines);
