@@ -20,6 +20,7 @@ $(document).ready(function(){
 //create word bank
 
 //load first word after user presses any key
+//could I store the below event in a variable or function to be called on??
 $(document).keyup(function(event){
 	var userGuess = event.key 
 	// console.log($("#game-word"));
@@ -76,12 +77,50 @@ console.log(invalid);
 				alert("You lost!")
 				losses++;
 				$("#loss-counter").html(losses);
+				wordArray();
+				guessesLeft+=7
+				$("#letters-guessed").html("")
 			}
 			
 		}
 
-			
-	
+//determine words you want to use			
+//when page loads and user presses any key
+	//load word
+	//load wordLines
+	//set userGuesses counter to 7
+	//set wins to 0
+	//set losses to 0
+	//wait for user to choose a letter
+//when user chooses a letter
+	//compare letter chosen to all the letters of word loaded and to letters guessed
+		//if the letter matches one from the word loaded
+			//display all that match above corresponding wordLine
+		//check to see if all the letters have been guessed
+			//if all the letters of word have been guessed
+				//display message to user that they are awesome and that they won
+				//increase wins by 1
+				//clear letters guessed
+				//load new word
+				//load wordLines
+				//set userGuesses counter to 7
+		//if the letter matches one from letters guessed
+			//tell the user they have already chosen that letter		
+		//if the letter does not match any letters from the word loaded
+			//deduct userGuesses by 1
+			//display/add letter guessed under #letters-guessed
+		//if userGuesses equals 0
+			//display message to user that they lost 
+				//increase loss by 1
+				//clear letters guessed
+				//load new word
+				//load wordLines
+				//set userGuesses counter to 7				
+
+
+//note: test to see if you can get a word loaded to html where each letter is on a different span or div
+//note: think about adding guessed letters to a dynamic array that allows you to push values to it
+
 	
 	//if user guess is correct 
 	// if (letter === )
